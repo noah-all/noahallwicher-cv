@@ -1,5 +1,9 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
 
-// https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  // Your main GitHub Pages domain
+  site: 'https://noah-all.github.io',
+  // The repository name, with slashes
+  base: '/noahallwicher-cv/',
+});
+
