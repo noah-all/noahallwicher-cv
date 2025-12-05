@@ -1,11 +1,543 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const email = "[email protected]";
+const location = "Zurich, CH";
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Noah Allwicher">
+  <!-- THEME TOGGLE BUTTON (top-right) -->
+  <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+    ☾
+  </button>
+
+  <main class="page">
+    <header class="hero">
+      <div>
+        <h1>Noah Allwicher</h1>
+        <p class="tagline">Physics, Skiing &amp; Painting</p>
+      </div>
+      <div class="contact">
+        <a href={`mailto:${email}`}>{email}</a>
+        <span>{location}</span>
+      </div>
+    </header>
+
+    <!-- EDUCATION -->
+    <section class="section">
+      <h2>Education</h2>
+
+      <!-- Oxford -->
+      <div class="entry">
+        <div class="entry-heading">
+          Master&rsquo;s Thesis, University of Oxford
+        </div>
+        <div class="entry-dates">
+          02.2025 &ndash; present
+        </div>
+
+        <ul class="entry-points">
+          <li>
+            Reducing motion artefacts in optical saturation measurements.
+          </li>
+          <li>
+            Developing sensing hardware and feedback systems for optical
+            pulse-oximetry measurements.
+          </li>
+          <li>
+            Supported by a full scholarship from the Sheffield CF Facility
+            covering tuition, accommodation, and living costs.
+          </li>
+        </ul>
+        <div class="entry-location">
+          Oxford, UK
+        </div>
+      </div>
+
+      <!-- ETH MSc -->
+      <div class="entry">
+        <div class="entry-heading">
+          MSc Physics, ETH Z&uuml;rich
+        </div>
+        <div class="entry-dates">
+          09.2024 &ndash; present
+        </div>
+
+        <ul class="entry-points">
+          <li>
+            Built a pulse modulation setup using a 4f optical layout,
+            programmable elements, and high-precision motor control.
+          </li>
+          <li>
+            Coursework includes machine and deep learning for physicists, quantum
+            optics, and system design.
+          </li>
+        </ul>
+        <div class="entry-location">
+          Zurich, CH
+        </div>
+      </div>
+
+      <!-- ETH BSc -->
+      <div class="entry">
+        <div class="entry-heading">
+          BSc Physics, ETH Z&uuml;rich
+        </div>
+        <div class="entry-dates">
+          09.2021 &ndash; 09.2024
+        </div>
+
+        <ul class="entry-points">
+          <li>
+            Broad training in theoretical and experimental physics, including
+            quantum mechanics, thermodynamics, and quantum electronics.
+          </li>
+          <li>
+            Gained experience in numerical methods and data analysis, plus a
+            dedicated computer science course.
+          </li>
+          <li>
+            Designed and evaluated a quantum-optics experiment on
+            electromagnetically induced transparency (EIT).
+          </li>
+        </ul>
+        <div class="entry-location">
+          Zurich, CH
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK EXPERIENCE -->
+    <section class="section">
+      <h2>Work Experience</h2>
+
+      <!-- Tsinghua -->
+      <div class="entry">
+        <div class="entry-heading">
+          Research Intern, 清华大学 (Tsinghua Precision Instruments)
+        </div>
+        <div class="entry-dates">
+          08.2025 &ndash; 09.2025
+        </div>
+
+        <ul class="entry-points">
+          <li>
+            Conducted <strong>team</strong> measurements on properties of
+            nanoscale zero-index metawaveguides.
+          </li>
+          <li>
+            Presented current research at universities in Beijing and Guangzhou.
+          </li>
+          <li>
+            Drove knowledge transfer and best practices for Western academic
+            writing.
+          </li>
+        </ul>
+        <div class="entry-location">
+          Beijing, CN
+        </div>
+      </div>
+
+      <!-- TA ETH -->
+      <div class="entry">
+        <div class="entry-heading">
+          Teaching Assistant, ETH Zurich
+        </div>
+        <div class="entry-dates">
+          09.2023 &ndash; 02.2024
+        </div>
+
+        <ul class="entry-points">
+          <li>
+            Teaching assistant for Prof.&nbsp;Ensslin in the introductory course
+            Physics&nbsp;I.
+          </li>
+          <li>
+            Received the VMP Assistant Award from the student association for
+            outstanding teaching support.
+          </li>
+        </ul>
+        <div class="entry-location">
+          Zurich, CH
+        </div>
+      </div>
+
+      <!-- Wanders Wagner -->
+      <div class="entry">
+        <div class="entry-heading">
+          Summer Intern, Wanders Wagner
+        </div>
+        <div class="entry-dates">
+          08.2023 &ndash; 09.2023
+        </div>
+
+        <ul class="entry-points">
+          <li>
+            Contributed to the facade design of a four-storey residential
+            building on Al-Wash Street, now under construction.
+          </li>
+          <li>
+            Focused on clear communication between engineering and development
+            teams.
+          </li>
+        </ul>
+        <div class="entry-location">
+          Dubai, UAE
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section">
+      <h2>Design &amp; Creative Engineering Projects</h2>
+
+      <!-- Optical saturation project -->
+      <div class="entry">
+        <div class="entry-heading">
+          Reducing motion artefact in optical saturation measurements
+        </div>
+        <div class="entry-dates">
+          25&nbsp;weeks, 2025
+        </div>
+
+        <ul class="entry-points">
+          <li>
+            Working on sensor interfaces to mitigate motion artefacts in optical
+            oxygen saturation measurements in the pulse-oximetry market.
+          </li>
+          <li>
+            Improving ADC signal quality and implementing low-latency
+            microcontroller logic for real-time processing.
+          </li>
+        </ul>
+        <div class="entry-location">
+          Oxford, UK
+        </div>
+      </div>
+
+      <!-- Pulse modulator -->
+      <div class="entry">
+        <div class="entry-heading">
+          Pulse Modulator for Femtosecond Ti:Sapphire Laser
+        </div>
+        <div class="entry-dates">
+          12&nbsp;weeks, 2024
+        </div>
+
+        <ul class="entry-points">
+          <li>
+            Designed and assembled a pulse stretcher and dispersion compressor
+            in a free-space 4f system for a Ti:Sapphire laser.
+          </li>
+          <li>
+            Programmed motorized irises, quantified chirp from fibre-coupled
+            delay lines, and combined optics with feedback control and interface
+            design to dynamically shape light.
+          </li>
+        </ul>
+        <div class="entry-location">
+          Zurich, CH
+        </div>
+      </div>
+
+      <!-- Skyscraper -->
+      <div class="entry">
+        <div class="entry-heading">
+          Speculative Skyscraper Design (Helmut-Rhode-F&ouml;rderpreis)
+        </div>
+        <div class="entry-dates">
+          2019
+        </div>
+
+        <ul class="entry-points">
+          <li>
+            Developed a speculative skyscraper concept exploring future vertical
+            urbanism.
+          </li>
+          <li>
+            Recognised for design thinking, presentation, and urban systems
+            ideas; exhibited at the Stadtmuseum D&uuml;sseldorf and in a
+            regional competition.
+          </li>
+        </ul>
+        <div class="entry-location">
+          D&uuml;sseldorf, DE
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- THEME TOGGLE SCRIPT -->
+  <script>
+    if (typeof window !== "undefined") {
+      const root = document.documentElement;
+      const btn = document.getElementById("theme-toggle");
+
+      const getPreferred = () => {
+        const stored = window.localStorage.getItem("theme");
+        if (stored === "light" || stored === "dark") return stored;
+        return window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: light)").matches
+          ? "light"
+          : "dark";
+      };
+
+      const applyTheme = (theme) => {
+        root.dataset.theme = theme;
+        window.localStorage.setItem("theme", theme);
+        if (btn) {
+          btn.textContent = theme === "dark" ? "☾" : "☼";
+          btn.setAttribute(
+            "aria-label",
+            theme === "dark" ? "Switch to light mode" : "Switch to dark mode"
+          );
+        }
+      };
+
+      applyTheme(getPreferred());
+
+      btn?.addEventListener("click", () => {
+        const next = root.dataset.theme === "dark" ? "light" : "dark";
+        applyTheme(next);
+      });
+    }
+  </script>
+
+  <style>
+    /* THEME VARIABLES */
+
+    :global(:root) {
+      --bg: #0b0b10;
+      --fg: #f5f5f5;
+      --muted: #a0a0b5;
+      --accent: #9ad0ff;
+      --border-subtle: #2a2a3a;
+      --card-bg: rgba(20, 20, 30, 0.9);
+    }
+
+    :global(:root[data-theme="light"]) {
+      --bg: #ffffff;
+      --fg: #111111;
+      --muted: #555555;
+      --accent: #0056b3;
+      --border-subtle: #dddddd;
+      --card-bg: #f9f9fb;
+    }
+
+    :global(body) {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1.5rem;
+      align-items: baseline;
+      margin-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin: 0 0 0.25rem;
+    }
+
+    .tagline {
+      margin: 0;
+      font-size: 1.1rem;
+      color: var(--muted);
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      font-size: 0.95rem;
+      text-align: right;
+    }
+
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    .section {
+      margin-top: 2.5rem;
+    }
+
+    .section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 0.4rem;
+    }
+
+    /* CV-style two-row, two-column entry layout */
+
+	.entry {
+		display: grid;
+		grid-template-columns: minmax(0, 6fr) minmax(0, 1fr); /* left / right */
+		grid-template-rows: auto auto;                        /* header row, content row */
+		column-gap: 2rem;
+		row-gap: 0;
+		margin-bottom: 1.6rem;
+		align-items: flex-start;
+		/* no background / no card styling */
+	}
+
+
+    .entry-heading {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .entry-dates {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+      text-align: right;
+      font-size: 0.9rem;
+      white-space: nowrap;
+      color: var(--muted);
+    }
+
+    .entry-points {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      margin: 0;
+      padding-left: 1.2rem;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    .entry-location {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      text-align: right;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-top: 0;
+    }
+
+    ul {
+      margin: 0;
+    }
+
+    /* THEME TOGGLE BUTTON */
+
+    .theme-toggle {
+      position: fixed;
+      top: 1.2rem;
+      right: 1.2rem;
+      padding: 0.25rem 0.55rem;
+      font-size: 0.85rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-subtle);
+      background: rgba(10, 10, 15, 0.9);
+      color: var(--fg);
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    :global(:root[data-theme="light"]) .theme-toggle {
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .theme-toggle:hover {
+      border-color: var(--accent);
+    }
+
+    /* Mobile */
+    @media (max-width: 700px) {
+      .entry {
+        grid-template-columns: 1fr;
+      }
+
+      .entry-dates,
+      .entry-location {
+        grid-column: 1 / 2;
+        text-align: left;
+        white-space: normal;
+      }
+
+      .contact {
+        text-align: left;
+        align-items: flex-start;
+      }
+    }
+
+
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 3rem;  /* normal padding, we’ll add extra via spacer */
+}
+
+/* DOWNLOAD BUTTON AT THE BOTTOM */
+
+.print-wrapper {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.print-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #555;
+  background: transparent;
+  border-radius: 999px;
+  width: 2.4rem;
+  height: 2.4rem;
+  font-size: 1.2rem;      /* size of the 📄 */
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.print-button:hover {
+  border-color: #000;
+}
+
+/* GUARANTEED SPACE UNDER THE BUTTON */
+.page-bottom-spacer {
+  height: 4rem;   /* adjust this to get more/less bottom space */
+}
+
+/* hide toggle + button when actually printing, optional */
+@media print {
+  .theme-toggle,
+  .print-wrapper,
+  .page-bottom-spacer {
+    display: none;
+  }
+}
+
+
+
+
+
+
+  </style>
 </Layout>
+
